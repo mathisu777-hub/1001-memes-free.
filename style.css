@@ -1,179 +1,56 @@
 body{
-  margin:0;
-  font-family:sans-serif;
-  background:#f4f4f4;
-  transition: background 0.5s, color 0.5s;
-}
-
-body.dark{
-  background:#121212;
-  color:white;
-}
-
-body.vipBackground{
-  background: linear-gradient(45deg, #ff0080, #ffcd00, #00f0ff, #ff00ff);
-  background-size: 400% 400%;
-  animation: vipGradient 12s ease infinite;
-}
-
-body.vipBackgroundSimulated{
-  background: linear-gradient(45deg, #8888ff, #ff88ff, #88ff88, #ffff88);
-  background-size: 400% 400%;
-  animation: vipGradient 12s ease infinite;
-}
-
-@keyframes vipGradient{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
+margin:0;
+font-family:sans-serif;
+background:#f4f4f4;
 }
 
 nav{
-  display:flex;
-  justify-content:space-between;
-  padding:15px 30px;
-  background:#111;
-  color:white;
-  align-items:center;
+background:#111;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.menu button{
-  margin-left:10px;
-  padding:8px 14px;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-  font-weight:bold;
-  transition:0.2s;
-}
-
-.menu button:hover{
-  transform:scale(1.05);
-  background:#333;
+nav button{
+margin-left:10px;
+padding:8px 14px;
+border:none;
+border-radius:6px;
+cursor:pointer;
 }
 
 .page{
-  display:none;
-  padding:30px;
+display:none;
+padding:30px;
 }
 
 .active{
-  display:block;
+display:block;
 }
 
 .memes{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  margin-top:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:20px;
 }
 
 .memeCard{
-  background:white;
-  padding:10px;
-  border-radius:12px;
-  text-align:center;
-  box-shadow:0 6px 16px rgba(0,0,0,0.15);
-  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s, background 0.3s;
+background:white;
+padding:10px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 6px 16px rgba(0,0,0,0.15);
 }
 
 .memeCard img{
-  max-width:100%;
-  border-radius:10px;
+max-width:100%;
+border-radius:10px;
 }
 
-.memeCard:hover{
-  transform:scale(1.05);
-  box-shadow:0 10px 25px rgba(0,0,0,0.25);
-}
-
-.memeCard.vip{
-  background: linear-gradient(135deg,#ff0080,#ffcd00,#00f0ff);
-  box-shadow: 0 0 20px #ff0080, 0 0 40px #ffcd00;
-  animation: glow 3s infinite alternate;
-}
-
-@keyframes glow{
-  0%{box-shadow: 0 0 20px #ff0080, 0 0 40px #ffcd00;}
-  50%{box-shadow: 0 0 40px #ff0080, 0 0 60px #ffcd00;}
-  100%{box-shadow: 0 0 20px #ff0080, 0 0 40px #ffcd00;}
-}
-
-.memeButtons{
-  margin-top:10px;
-  display:flex;
-  justify-content:center;
-  gap:10px;
-}
-
-.memeButtons button, .memeButtons a button{
-  padding:8px 12px;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:bold;
-  transition:transform 0.2s, background 0.3s;
-}
-
-.memeButtons button:hover, .memeButtons a button:hover{
-  transform:scale(1.1);
-}
-
-.memeButtons a button{
-  background:#ffcc00;
-  color:black;
-}
-
-.memeButtons button.like{
-  background:#ff4b5c;
-  color:white;
-}
-
-.canjear{
-  margin:15px 0;
-  text-align:center;
-}
-
-.canjear input{
-  padding:6px 10px;
-  border-radius:5px;
-  border:1px solid #ccc;
-}
-
-.canjear button{
-  padding:6px 10px;
-  margin-left:5px;
-  border-radius:5px;
-  border:none;
-  background:#4CAF50;
-  color:white;
-  cursor:pointer;
-}
-
-.canjear small{
-  display:block;
-  margin-top:5px;
-  font-size:12px;
-  color:#555;
-}
-
-/* Toast messages */
-#toastContainer{
-  position:fixed;
-  top:20px;
-  right:20px;
-  z-index:9999;
-}
-.toast{
-  background:rgba(0,0,0,0.8);
-  color:white;
-  padding:10px 15px;
-  border-radius:8px;
-  margin-top:10px;
-  animation: fadeOut 3s forwards;
-}
-@keyframes fadeOut{
-  0%{opacity:1;}
-  80%{opacity:1;}
-  100%{opacity:0;}
+.vipWarning{
+color:red;
+font-size:14px;
 }
